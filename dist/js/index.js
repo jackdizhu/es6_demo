@@ -82,6 +82,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 var _test = __webpack_require__(1);
 
+var a = new _test.index();
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
