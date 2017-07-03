@@ -2,7 +2,7 @@
 import {test1} from './test1.js';
 
 class index extends test1 {
-    // 继承不能写 构造函数
+    // 函数名 跟 父类 相同(会覆盖父类 同名方法)
     // constructor() {
     //     console.log('this is constructor2');
     // }
