@@ -9,6 +9,12 @@ class index extends test1 {
     index(){
         console.log('index');
     }
+    test2(...arg){
+        //  参数加 ... 表示多个参数 => 11 "aaa" "log01"
+        console.log(...arg,'log01');
+        // 参数不加 ... 表示一个数组参数 => [11, "aaa"] "log02"
+        console.log(arg,'log02');
+    }
 }
 
 export {index}
