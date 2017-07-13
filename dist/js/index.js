@@ -75,83 +75,58 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_test2_js__ = __webpack_require__(1);
 
 
-var _test = __webpack_require__(1);
 
-var a = new _test.index();
+var a = new __WEBPACK_IMPORTED_MODULE_0__js_test2_js__["a" /* index */]();
+
+a.index();
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return index; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__test1_js__ = __webpack_require__(2);
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.index = undefined;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _test2 = __webpack_require__(2);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var index = function (_test) {
-    _inherits(index, _test);
-
-    function index() {
-        _classCallCheck(this, index);
-
-        return _possibleConstructorReturn(this, (index.__proto__ || Object.getPrototypeOf(index)).apply(this, arguments));
+class index extends __WEBPACK_IMPORTED_MODULE_0__test1_js__["a" /* test1 */] {
+    // 定义 跟父类 同名方法 会产生覆盖
+    // constructor() {
+    //     console.log('this is constructor2');
+    // }
+    index() {
+        console.log('index');
     }
+}
 
-    _createClass(index, [{
-        key: 'index',
 
-        // 继承不能写 构造函数
-        // constructor() {
-        //     console.log('this is constructor2');
-        // }
-        value: function index() {
-            console.log('index');
-        }
-    }]);
-
-    return index;
-}(_test2.test1);
-
-exports.index = index;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return test1; });
+
+class test1 {
+    // 构造函数
+    constructor() {
+        console.log('this is constructor');
+    }
+    index(...arg) {
+        console.log(arg);
+    }
+}
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var test1 = function test1() {
-    _classCallCheck(this, test1);
-
-    console.log('this is constructor');
-};
-
-exports.test1 = test1;
 
 /***/ })
 /******/ ]);
